@@ -1,8 +1,6 @@
 pipeline {
 	agent any 
-	parameters {
-		choice(name: 'ENVIRONMENT', choices: ['QA','UAT'], description: 'Pick Environment value')
-	}
+	
 	stages {
 	    stage('Checkout') {
 	        steps {
@@ -14,6 +12,6 @@ pipeline {
 	                 }}
 		stage('Deployment'){
 		   steps {
-		sh 'cp target/flipkart.war /home/swapnil/Documents/DevOps-Software/apache-tomcat-9.0.79/webapps'
+		sh 'cp target/project1.war /home/shubhangi/Documents/DevopsSoftware/apache-tomcat-9.0.82/webapps'
 			}}	
 }}
